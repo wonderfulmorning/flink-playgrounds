@@ -19,6 +19,10 @@
 package org.apache.flink.playgrounds.spendreport;
 
 import org.apache.flink.api.java.ExecutionEnvironment;
+import org.apache.flink.connector.jdbc.JdbcExactlyOnceOptions;
+import org.apache.flink.connector.jdbc.JdbcExecutionOptions;
+import org.apache.flink.connector.jdbc.JdbcSink;
+import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.table.api.EnvironmentSettings;
 import org.apache.flink.table.api.Table;
 import org.apache.flink.table.api.TableEnvironment;
@@ -77,5 +81,9 @@ public class BaseTests {
         //读数据,会有op列，但是读取的是最终数据；
         TableResult execute = tEnv.sqlQuery("select * from test_table_source").execute();
         execute.print();
+    }
+
+    public void jdbcSinkTest(){
+        //JdbcSink  https://zhuanlan.zhihu.com/p/665189359
     }
 }
