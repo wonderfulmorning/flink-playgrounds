@@ -121,6 +121,14 @@ under the License.
             <artifactId>log4j</artifactId>
             <version>1.2.17</version>
         </dependency>
+
+        <!--rocksdb 测试，该jar内的librocksdbjni-win64.dll才能被windows系统正常加载-->
+        <dependency>
+            <groupId>org.rocksdb</groupId>
+            <artifactId>rocksdbjni</artifactId>
+            <version>9.9.3</version>
+        </dependency>
+
     </dependencies>
 
     <build>

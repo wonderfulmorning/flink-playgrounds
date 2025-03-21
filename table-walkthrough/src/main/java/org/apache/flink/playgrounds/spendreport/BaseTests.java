@@ -50,6 +50,11 @@ public class BaseTests {
         EnvironmentSettings settings = EnvironmentSettings.newInstance().build();
         TableEnvironment tEnv = TableEnvironment.create(settings);
 
+
+        //批模式，支持update和delete
+/*        EnvironmentSettings settings = EnvironmentSettings.newInstance().inBatchMode().build();
+        TableEnvironment tableEnv = TableEnvironment.create(settings);*/
+
         //batch mode
 /*        EnvironmentSettings settings = EnvironmentSettings.newInstance().inBatchMode().build();
         TableEnvironment tEnv = TableEnvironment.create(settings);*/
